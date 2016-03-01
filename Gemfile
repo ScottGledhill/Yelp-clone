@@ -4,7 +4,7 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
 end
-
+gem 'devise'
 gem 'shoulda'
 gem 'rspec-collection_matchers'
 gem 'haml'
