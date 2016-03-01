@@ -3,3 +3,10 @@ require 'rails_helper'
 describe Restaurant, type: :model do
   it { is_expected.to have_many :reviews }
 end
+
+  describe 'restaurant' do
+  it 'is not valid with a name of less than three characters' do
+    restaurant = Restaurant.new(name: "kf")
+    expect(restaurant).not_to be_valid
+  end
+end
