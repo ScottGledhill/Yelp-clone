@@ -5,6 +5,8 @@ group :test do
   gem 'capybara'
 end
 
+gem 'shoulda'
+	
 gem 'haml'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
