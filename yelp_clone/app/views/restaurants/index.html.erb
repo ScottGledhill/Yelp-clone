@@ -11,6 +11,7 @@
 
           <li>
             <h3>Average rating: <%= restaurant.average_rating.to_i %></h3>
+            <%= star_rating(restaurant.average_rating) %>
             <%= review.thoughts %>, <strong><%= review.rating %></strong>/5
           </li>
         <% end %>

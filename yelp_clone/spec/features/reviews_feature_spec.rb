@@ -73,6 +73,6 @@ feature 'reviewing' do
     sign_up
     create_restaurant
     leave_review('Great!', '5')
-    expect(page).to have_content('Average rating: ★★★★★')
+    expect(page).to have_content('Average rating: 5 ★★★★★')
   end
 end
