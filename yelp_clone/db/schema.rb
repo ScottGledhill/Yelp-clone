@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160303183547) do
-=======
-ActiveRecord::Schema.define(version: 20160303191944) do
->>>>>>> 73204d1fb2072c871b923ec83702a9d589836c8c
+ActiveRecord::Schema.define(version: 20160303184027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,10 +68,6 @@ ActiveRecord::Schema.define(version: 20160303191944) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "endorsements", "reviews"
-<<<<<<< HEAD
-  add_foreign_key "restaurants", "reviews"
-=======
->>>>>>> 73204d1fb2072c871b923ec83702a9d589836c8c
   add_foreign_key "restaurants", "users"
   add_foreign_key "reviews", "restaurants"
   add_foreign_key "reviews", "users"
