@@ -9,7 +9,7 @@
       <ul>
         <% restaurant.reviews.each do |review| %>
         <p><%= pluralize review.endorsements.count, 'endorsement' %></p>
-        <%= link_to "Endorse Review", review_path(restaurant, review) %>
+        <%= link_to "Endorse Review", endorsement_path(restaurant, review) %>
           <li>
             <h3>Average rating: <%= restaurant.average_rating.to_i %></h3>
             <%= star_rating(restaurant.average_rating) %>
