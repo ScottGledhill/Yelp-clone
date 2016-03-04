@@ -76,4 +76,9 @@ context 'an invalid restaurant' do
   end
 end
 
+  context 'number of endorsements correctly shown' do
+    it 'should return the correct number of endorsements per restaurant' do
+
+    end
+  end
 end

@@ -2,15 +2,26 @@
   <% @restaurants.each do |restaurant| %>
     <h2><%= link_to restaurant.name, restaurant_path(restaurant) %> </h2>
     <%= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete %>
-    <%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant) %>
+    <%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant)
+ %>
     <h3>Reviews for <%= restaurant.name %></h3>
     <% if restaurant.reviews.any? %>
       <ul>
         <% restaurant.reviews.each do |review| %>
-        <%= link_to "Delete review", restaurant_review_path(restaurant, review), method: :delete %>
-
+<<<<<<< HEAD
+        <p><%= pluralize review.endorsements.count, 'endorsement' %></p>
+        <%= link_to "Endorse Review", review_path(restaurant, review) %>
+        <%= link_to "Delete review", review_path(restaurant, review), method: :delete %>
           <li>
             <h3>Average rating: <%= restaurant.average_rating.to_i %></h3>
+            <%= star_rating(restaurant.average_rating) %>
+=======
+        <%= link_to "Delete review", review_path( review), method: :delete %>
+        <p><%= pluralize review.endorsements.count, 'endorsement' %></p>
+
+          <li>
+            <h3>Average rating: <%= star_rating(restaurant.average_rating) %></h3>
+>>>>>>> 73204d1fb2072c871b923ec83702a9d589836c8c
             <%= review.thoughts %>, <strong><%= review.rating %></strong>/5
           </li>
         <% end %>

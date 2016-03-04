@@ -22,7 +22,7 @@ def sign_up_other
 end
 
 def leave_review(thoughts, rating)
-  visit '/restaurants'
+  visit '/'
   click_link 'Review KFC'
   fill_in 'Thoughts', with: thoughts
   select rating, from: 'Rating'

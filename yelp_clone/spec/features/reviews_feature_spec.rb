@@ -64,15 +64,7 @@ feature 'reviewing' do
     visit '/'
     sign_up
     create_restaurant
-    leave_review('Great', '5')
-    expect(page).to have_content('Average rating: 5')
-  end
-
-  scenario 'displays an average rating for all reviews' do
-    visit '/'
-    sign_up
-    create_restaurant
     leave_review('Great!', '5')
-    expect(page).to have_content('Average rating: ★★★★★')
+    expect(page).to have_content('Average rating: 5 ★★★★★')
   end
 end
