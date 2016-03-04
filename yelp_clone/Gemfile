@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'poltergeist'
+gem 'database_cleaner'
 gem 'omniauth-facebook'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
